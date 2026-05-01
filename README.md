@@ -62,6 +62,14 @@ The project demonstrates how credit risk teams can use data analytics and machin
 - Balance false positives and false negatives
 - Build reproducible risk-scoring pipelines
 
+## Explainability
+
+Model explainability was implemented using XGBoost gain-based feature importance to identify the strongest credit-risk drivers contributing to probability-of-default predictions.
+
+The top-risk indicators were used to support interpretability for credit decisioning, including behavioural repayment signals, historical application outcomes, overdue exposure, and credit history patterns.
+
+SHAP explainability was investigated, but excluded from the current version due to compatibility issues between the installed SHAP and XGBoost versions when parsing booster metadata. It is listed as a future improvement.
+
 ## Tech Stack
 
 - Python
