@@ -70,6 +70,8 @@ The top-risk indicators were used to support interpretability for credit decisio
 
 SHAP explainability was investigated, but excluded from the current version due to compatibility issues between the installed SHAP and XGBoost versions when parsing booster metadata. It is listed as a future improvement.
 
+An Optuna-tuned LightGBM challenger model was also tested. Although tuning marginally improved ROC-AUC, it slightly reduced PR-AUC compared with the baseline LightGBM model. Since PR-AUC is more important for this imbalanced default-risk problem, the baseline LightGBM model was retained as the champion model.
+
 ## Tech Stack
 
 - Python
