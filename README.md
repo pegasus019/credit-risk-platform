@@ -72,6 +72,22 @@ SHAP explainability was investigated, but excluded from the current version due 
 
 An Optuna-tuned LightGBM challenger model was also tested. Although tuning marginally improved ROC-AUC, it slightly reduced PR-AUC compared with the baseline LightGBM model. Since PR-AUC is more important for this imbalanced default-risk problem, the baseline LightGBM model was retained as the champion model.
 
+## Probability Calibration
+
+The initial LightGBM model produced strong ranking performance but inflated raw risk scores due to class imbalance weighting. To convert model scores into more reliable Probability of Default (PD) estimates, sigmoid calibration was applied using a separate calibration split.
+
+Calibration preserved ranking performance while significantly improving probability quality.
+
+| Metric              | Raw LightGBM | Calibrated LightGBM |
+| ------------------- | -----------: | ------------------: |
+| ROC-AUC             |       0.7715 |              0.7715 |
+| PR-AUC              |       0.2696 |              0.2696 |
+| Brier Score         |       0.1794 |              0.0670 |
+| Mean Prediction     |       38.54% |               7.97% |
+| Actual Default Rate |        8.07% |               8.07% |
+
+The calibrated model is used to generate borrower-level Probability of Default values for risk segmentation and dashboard reporting.
+
 ## Tech Stack
 
 - Python
