@@ -88,6 +88,21 @@ Calibration preserved ranking performance while significantly improving probabil
 
 The calibrated model is used to generate borrower-level Probability of Default values for risk segmentation and dashboard reporting.
 
+## Calibration Curve & Reliability Analysis
+
+A calibration curve was added to compare raw LightGBM risk scores against calibrated probability-of-default estimates.
+
+The raw LightGBM model showed inflated probability outputs due to class imbalance weighting. After sigmoid calibration, the model's mean predicted PD aligned closely with the observed default rate while maintaining the same ranking performance.
+
+Calibration improved probability reliability significantly:
+
+- Raw Brier Score: 0.1794
+- Calibrated Brier Score: 0.0670
+- Raw Mean Prediction: 38.54%
+- Calibrated Mean PD: 7.97%
+- Actual Default Rate: 8.07%
+
+The calibrated model is therefore more suitable for borrower-level PD reporting, risk segmentation, and expected loss estimation.
 ## Tech Stack
 
 - Python
