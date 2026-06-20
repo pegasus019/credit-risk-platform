@@ -102,6 +102,26 @@ Calibration improved probability reliability significantly:
 - Calibrated Mean PD: 7.97%
 - Actual Default Rate: 8.07%
 
+## Fairness & Bias Analysis
+
+This project evaluates model fairness across multiple demographic and socioeconomic groups:
+
+- Gender (`CODE_GENDER`)
+- Education Level (`NAME_EDUCATION_TYPE`)
+- Family Status (`NAME_FAMILY_STATUS`)
+- Occupation (`OCCUPATION_TYPE`)
+- Housing Type (`NAME_HOUSING_TYPE`)
+
+For each group, the following metrics are compared:
+
+- Actual Default Rate
+- Average Predicted Probability of Default (PD)
+- Predicted Default Rate
+- False Positive Rate (FPR)
+- False Negative Rate (FNR)
+
+This analysis helps identify potential disparities in credit decisions and demonstrates responsible AI practices in financial risk modeling.
+
 The calibrated model is therefore more suitable for borrower-level PD reporting, risk segmentation, and expected loss estimation.
 ## Tech Stack
 
