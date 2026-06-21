@@ -123,6 +123,20 @@ For each group, the following metrics are compared:
 This analysis helps identify potential disparities in credit decisions and demonstrates responsible AI practices in financial risk modeling.
 
 The calibrated model is therefore more suitable for borrower-level PD reporting, risk segmentation, and expected loss estimation.
+
+## Expected Loss Estimation
+
+Expected Loss (EL) was calculated as:
+
+EL = PD × LGD × EAD
+
+where:
+
+PD = Probability of Default
+LGD = Loss Given Default
+EAD = Exposure at Default
+
+This enables portfolio-level risk estimation.
 ## Tech Stack
 
 - Python
