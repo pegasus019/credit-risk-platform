@@ -137,6 +137,23 @@ LGD = Loss Given Default
 EAD = Exposure at Default
 
 This enables portfolio-level risk estimation.
+
+## Model Monitoring
+
+Implemented a production-style monitoring framework including:
+
+Monthly portfolio monitoring
+Default-rate trend analysis
+Expected Loss (EL = PD × LGD × EAD)
+Population Stability Index (PSI)
+Portfolio drift monitoring
+Risk band monitoring
+
+Monitoring Result
+
+PSI: 0.0005
+Interpretation: Stable portfolio with no significant data drift detected.
+
 ## Tech Stack
 
 - Python
