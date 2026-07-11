@@ -1,0 +1,4 @@
+Model,ROC_AUC,PR_AUC,Brier_Score,Notes,ROC_Rank,PR_Rank,Brier_Rank,Overall_Score
+LightGBM Baseline,0.7746,0.2732,,Best ranking performance,1.0,1.0,2.0,4.0
+Calibrated LightGBM,0.7715,0.2696,0.067,Best probability reliability,2.0,2.0,1.0,5.0
+Logistic Regression,0.7504,0.2309,,Baseline interpretable model,3.0,3.0,2.0,8.0
