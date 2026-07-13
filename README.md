@@ -1,3 +1,11 @@
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+
+![LightGBM](https://img.shields.io/badge/LightGBM-4.8-green)
+
+![PowerBI](https://img.shields.io/badge/PowerBI-Dashboard-yellow)
+
+![License](https://img.shields.io/badge/License-MIT-success)
+
 # Credit Risk Modelling Platform
 
 End-to-end credit risk analytics project using the Home Credit dataset to predict probability of default (PD) and support borrower risk segmentation.
