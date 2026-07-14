@@ -162,6 +162,27 @@ Monitoring Result
 PSI: 0.0005
 Interpretation: Stable portfolio with no significant data drift detected.
 
+## Champion–Challenger Model Governance
+
+Rather than selecting the best model manually, this project implements a production-inspired Champion–Challenger framework commonly used in banking and financial risk management.
+
+Models evaluated:
+
+- Logistic Regression
+- XGBoost
+- LightGBM
+- Calibrated LightGBM
+
+Each model is compared using:
+
+- ROC-AUC
+- PR-AUC
+- Brier Score
+- Probability Calibration
+- Business suitability
+
+The highest-performing model is designated as the **Champion**, while alternative models are retained as **Challengers** for continuous benchmarking, monitoring, and future replacement if performance degrades.
+
 ## Tech Stack
 
 - Python
@@ -171,6 +192,7 @@ Interpretation: Stable portfolio with no significant data drift detected.
 - XGBoost
 - Jupyter Notebook
 - Git/GitHub
+
 
 ## Project Structure
 
