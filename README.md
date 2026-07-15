@@ -199,8 +199,8 @@ The highest-performing model is designated as the **Champion**, while alternativ
 ```text
 credit-risk-platform/
 ├── data/
-│   ├── raw/          # ignored
-│   └── processed/    # ignored
+│   ├── raw/          
+│   └── processed/    
 ├── notebooks/
 │   └── 01_eda.ipynb
 ├── src/
